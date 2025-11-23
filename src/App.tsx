@@ -1,29 +1,23 @@
-import { useEffect } from "react"
-import { useQuery } from "./useQuery"
+import { LoadingCard } from "./components/cards/user/loading";
+import { UserCard } from "./components/cards/user";
 
-import "./styles.css"
+import "./styles.css";
 
 const App = () => {
-  const query = useQuery({
-    path: "https://pokeapi.co/api/v2/pokemon/ditto",
-    method: "GET"
-  })
-
-  useEffect(() => {
-    console.log(query)
-  }, [query])
-
   return (
     <div className="container">
-      <header>
-        <h1>React Loading Card</h1>
-        <h1>??</h1>
-      </header>
-      <div className="content">
-        {/* <Cards /> */}
+      <div className="cards-wrapper">
+        <LoadingCard />
+        <UserCard
+          id={1}
+          name="Carlos Henrique"
+          email="okaabe2006@gmail.com"
+          website="http://github.com/tosuki"
+          phone="3399441133"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

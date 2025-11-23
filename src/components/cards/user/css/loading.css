@@ -1,0 +1,79 @@
+.loading-card-container {
+  border-radius: var(--app-radius);
+  box-shadow: var(--card-shadow);
+
+  padding: 15px;
+
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.loading-card-container:hover {
+  transform: translateY(-5px);
+}
+
+.loading-card-container .loading-field {
+  background-color: var(--card-loading-thumb-bg);
+  animation: var(--pulse-animation);
+}
+
+.loading-card-container .card-header {
+  display: flex;
+  gap: 10px;
+  width: 300px;
+
+  .card-user-thumb {
+    width: 75px;
+    height: 75px;
+    border-radius: var(--app-radius);
+  }
+
+  .identifier-data {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .card-name,
+  .card-email {
+    height: 20px;
+    border-radius: 4px;
+    background-color: var(--card-loading-thumb-bg);
+    animation: var(--pulse-animation);
+  }
+
+  .card-name {
+    width: 100%;
+  }
+
+  .card-email {
+    width: 100%;
+  }
+}
+
+.loading-card-container .card-data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+
+  .card-phone,
+  .card-website {
+    height: 20px;
+  }
+
+  .card-phone {
+    width: 100%;
+  }
+
+  .card-website {
+    width: 100%;
+  }
+}

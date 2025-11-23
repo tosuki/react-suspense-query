@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --app-radius: 10px;
+  --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --card-loading-thumb-bg: oklch(92.9% 0.013 255.508);
+  --card-thumb-bg: oklch(71.2% 0.194 13.428);
+  --pulse-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  font-size: 16px;
+}
 
 * {
   margin: 0;
@@ -12,23 +22,25 @@ body {
 }
 
 .container {
+  background-color: #eeeeee;
+
   width: 100vw;
   height: 100vh;
 
+  padding: 20px 5%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.container header {
-  height: 70px;
-  width: 100%;
-
-  background-color: brown;
-  color: white;
-
-  padding: 0 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;  
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
 }
